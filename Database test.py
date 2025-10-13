@@ -15,17 +15,17 @@ salboard = [
 
 table = salboard
 
-"""with open('C:/Users/Josep/OneDrive/Desktop/Sixthform/2D array work/winners.csv', 'w') as file: # This creates the new file dumbass
+"""with open('databases/winners.csv', 'w') as file: # This creates the new file dumbass
     writer = csv.writer(file)
     writer.writerow(["player 1", "Player 2"])
 
-with open("C:/Users/Josep/OneDrive/Desktop/Sixthform/2D array work/winners.csv", "r") as file: # This reads the csv file to print the row for testing purposes since I am the goat
+with open("databases/winners.csv", "r") as file: # This reads the csv file to print the row for testing purposes since I am the goat
     content = csv.reader(open("winners.csv"))
     header = next(content)"""
 
 
 
-with open("C:/Users/Josep/OneDrive/Desktop/Sixthform/2D array work/dice.csv", "w") as file: # This creates a new database file for the winners of the game if you are a retard and can't read simple code
+with open("databases/dice.csv", "w") as file: # This creates a new database file for the winners of the game if you are a retard and can't read simple code
     writer = csv.writer(file)
     writer.writerow(["Player 1", "Player 2"])
 
@@ -33,7 +33,7 @@ with open("C:/Users/Josep/OneDrive/Desktop/Sixthform/2D array work/dice.csv", "w
         writer.writerow([f"{row[0]} {row[1]} {row[2]} {row[3]}"])   # SUP IMBECILES THIS PUTS THE DICE VALUES SIDE BY SIDE
 
 # CSV file like a table format
-with open("C:/Users/Josep/OneDrive/Desktop/Sixthform/2D array work/dice.csv", "r") as file:
+with open("databases/dice.csv", "r") as file:
     content = csv.reader(open("dice.csv"))
     header = next(content)
 
