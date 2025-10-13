@@ -17,6 +17,15 @@ salboard = [
 
 table = salboard
 
+winner_P = input("Who was the winner?: ")
+
+winner = []
+winner.append(winner_P)
+
+with open(".vscode/winners.csv", "w", newline = "") as file:
+    writer = csv.writer(file)
+    writer.writerow([winner_P])
+
 """with open('databases/winners.csv', 'w') as file: # This creates the new file dumbass
     writer = csv.writer(file)
     writer.writerow(["player 1", "Player 2"])
