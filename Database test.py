@@ -9,5 +9,5 @@ with open("databases/dice.csv", "r") as file: # This reads the csv file to print
     content = csv.reader(open("dice.csv"))
     header = next(content)
 
-    print(header)
+
 
