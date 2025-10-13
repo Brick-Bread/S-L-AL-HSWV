@@ -8,8 +8,14 @@ salboard=[[43, 44, 45, 46, 47, 48, 49],
 
 
 
-
+temp=""
 def displaying():
+    for i in range(len(salboard)):
+        for j in range(len(salboard)):
+            temp=salboard[i][j]
+        print(temp)        
     
+            
+        
 
 displaying()
