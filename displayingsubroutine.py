@@ -6,9 +6,9 @@ salboard=[[43, 44, 45, 46, 47, 48, 49],
           [14, 13, 12, 11, 10, 9, 8],
           [1, 2, 3, 4, 5, 6, 7]]
 
+def displaying():
+    for row in salboard:
+        for i in range(len(row)):
+            print(int(salboard[row][i]))
 
-for row in salboard:
-    for i in range(len(row)):
-        print(salboard[row][i])
-
-        
+displaying()
