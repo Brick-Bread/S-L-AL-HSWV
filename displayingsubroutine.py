@@ -7,3 +7,8 @@ salboard=[[43, 44, 45, 46, 47, 48, 49],
           [1, 2, 3, 4, 5, 6, 7]]
 
 
+for row in salboard:
+    for i in range(len(row)):
+        print(salboard[row][i])
+
+        
