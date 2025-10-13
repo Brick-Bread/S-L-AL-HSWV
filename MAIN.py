@@ -3,4 +3,5 @@ import random
 import time
 import csv
 
-print("hello world")
+for i in range(len(salboard)):
+    print salboard[i]
