@@ -3,6 +3,8 @@ import csv
 
 # THIS MOTHERFUCKING CODE DOESN'T WORK, IMA JUMP
 
+# It now works I guess, will work on putting into subroutines tomorrow
+
 salboard = [
     ["43", "44", "45", "46"],
     ["42", "41", "40", "39"],
