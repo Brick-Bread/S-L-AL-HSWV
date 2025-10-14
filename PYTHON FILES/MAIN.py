@@ -2,6 +2,10 @@ import tkinter
 import random
 import time
 import csv
+import Databasetest as dbt
+import displayingsubroutine as display
+import MAINGAMELOOP as mgl
+
 
 salboard=[[43, 44, 45, 46, 47, 48, 49],
           [42, 41, 40, 39, 38, 37, 36],
@@ -10,3 +14,4 @@ salboard=[[43, 44, 45, 46, 47, 48, 49],
           [15, 16, 17, 18, 19, 20, 21],
           [14, 13, 12, 11, 10, 9, 8],
           [1, 2, 3, 4, 5, 6, 7]]
+
