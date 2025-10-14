@@ -47,40 +47,52 @@ def s_lad():
     prompt1 = input("Player 1, press enter to roll the dice") #prompts player 1 to  iniciate the rolling of both dices
     roll1 = random.randint(1,6) #rolls dice 1
     roll2 = random.randint(1,6) #rolls dice 2
+
     if roll1 == roll2: #checks if a double was rolled
       print(f"Double was rolled, you go back {roll1 + roll2} spaces") #informs player they rolled a double
       player_1total -= roll1 + roll2 #moves player back the amount rolled (look at the task we were given and it says we need to do this)
     print(f"Player 1 rolled a {roll1} and a {roll2}") #informs player of what they rolled
     player_1total += roll1 + roll2 #moves player forward the amount rolled
+
     if player_1total < 1: #checks if player position is below 1 (a failsafe from an error i encountered while testing)
       player_1total = 1 #sets player position to 1 if below 1 cah board starts from 1 to 49
+
     if player_1total > 49: #checks if player position is above 49
       player_1total = 49  #sets player position to 49 if above 49 as the board ends at 49 (again i encountered an error where when i had this a player would roll above 49 and it would break the game not display the win message and just end)
     print(f"player 1 is moving {roll1 + roll2} spaces") #informs player how many spaces they are moving
+
     if player_1total == 3: #checks if player landed on a ladder
       player_1total = 22 #moves player to the top of the ladder
       print("Player 1 climbed a ladder to ",ladder1)
+
     elif player_1total == 5:
       player_1total = 8
       print("Player 1 climbed a ladder to ",ladder2)
+
     elif player_1total == 11:
       player_1total = 26
       print("Player 1 climbed a ladder to ",ladder3)
+
     elif player_1total == 20:
       player_1total = 29
       print("Player 1 climbed a ladder to ",ladder4)
+
     elif player_1total == 17:  
       player_1total = 4
       print("Player 1 got bitten by a snake to ",snake1)
+
     elif player_1total == 19:
       player_1total = 7
       print("Player 1 got bitten by a snake to ",snake2)
+      
     elif player_1total == 27:
       player_1total = 1
       print("Player 1 got bitten by a snake to ",snake3)
+
     elif player_1total == 39:
       player_1total = 3
       print("Player 1 got bitten by a snake to ",snake4) 
+
     if player_1total == 49: #checks if player 1 has won
       print("Player 1 wins!") #informs players that player 1 has won
       print(f"player 2 was on {player_2total}") #informs players of player 2 position
@@ -97,39 +109,51 @@ def s_lad():
     if roll1 == roll2:
       print(f"Double was rolled, you go back {roll1 + roll2} spaces")
       player_2total -= roll1 + roll2
+
     if player_2total < 0:
       player_2total = 0
+
     if player_2total > 49:
       player_2total = 49
+
     if player_2total == 3:
       player_2total = ladder1
       print("Player 2 climbed a ladder to ",ladder1)
+
     elif player_2total == 5:
       player_2total = ladder2
       print("Player 2 climbed a ladder to ",ladder2)
+
     elif player_2total == 11:
       player_2total = ladder3
       print("Player 2 climbed a ladder to ",ladder3)
+
     elif player_2total == 20:
       player_2total = ladder4
       print("Player 2 climbed a ladder to ",ladder4)
+
     elif player_2total == 17:
       player_2total = snake1
       print("Player 2 got bitten by a snake to ",snake1)
+
     elif player_2total == 19:
       player_2total = snake2
       print("Player 2 got bitten by a snake to ",snake2)
+
     elif player_2total == 27:
       player_2total = snake3
       print("Player 2 got bitten by a snake to ",snake3)
+
     elif player_2total == 39:
       player_2total = snake4
       print("Player 2 got bitten by a snake to ",snake4)
+
     if player_2total == 49: #checks if player 2 has won
       print("Player 2 wins!")  #informs players that player 2 has won
       print(f"player 1 was on {player_1total}") #informs players of player 1 position, if ur thinky why i dont show both player 2 and 1 position for this to run one player is at position 49 and the other player could be anywhere from 1 to 48 so i just show the other players position
       print("Game Over") #informs players that the game is over
       break 
+    
   return(player_1total, player_2total) #for the writing and whatever we need the results for idk , just returns the final positions of both players
 
 
