@@ -22,7 +22,7 @@ winner_P = input("Who was the winner?: ")
 winner = []
 winner.append(winner_P)
 
-with open(".vscode/winners.csv", "w", newline = "") as file:
+with open("databases/winners.csv", "w", newline = "") as file:
     writer = csv.writer(file)
     writer.writerow([winner_P])
 

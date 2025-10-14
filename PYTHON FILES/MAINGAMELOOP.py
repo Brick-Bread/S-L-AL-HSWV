@@ -116,5 +116,4 @@ def s_lad():
   return(player_1total, player_2total) #for the writing and whatever we need the results for idk , just returns the final positions of both players
 
 
-game = s_lad() #yk what this does
-print(game) 
+
