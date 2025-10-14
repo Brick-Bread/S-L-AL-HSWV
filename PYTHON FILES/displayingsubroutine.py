@@ -15,7 +15,11 @@ def disp(salboard):
             counter+=1
             if counter % 7 == 0:
                 print("\n")
-            
+    player1tile=1
+    player2tile=1
+    
+    print("Both players are on tile 1. \nplayer 1 moves first...")
+    
 
 
 
