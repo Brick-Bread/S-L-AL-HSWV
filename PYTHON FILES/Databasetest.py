@@ -22,11 +22,11 @@ winner_P = input("Who was the winner?: ")
 winner = []
 winner.append(winner_P)
 
-with open("databases/winners.csv", "w", newline = "") as file:
+"""with open("databases/winners.csv", "w", newline = "") as file:
     writer = csv.writer(file)
     writer.writerow([winner_P])
 
-"""with open('databases/winners.csv', 'w') as file: # This creates the new file dumbass
+with open('databases/winners.csv', 'w') as file: # This creates the new file dumbass
     writer = csv.writer(file)
     writer.writerow(["player 1", "Player 2"])
 
@@ -34,9 +34,16 @@ with open("databases/winners.csv", "r") as file: # This reads the csv file to pr
     content = csv.reader(open("winners.csv"))
     header = next(content)"""
 
+def create_database():
+    with open("databases/winner.csv", "w") as file:
+        writer = csv.writer(file)
+        writer.writerow(["Winner:  "], ["Counter:   "])
 
+create_database()
 
-with open("databases/dice.csv", "w") as file: # This creates a new database file for the winners of the game if you are a retard and can't read simple code
+print(create_database())
+
+"""with open("databases/dice.csv", "w") as file: # This creates a new database file for the winners of the game if you are a retard and can't read simple code
     writer = csv.writer(file)
     writer.writerow(["Player 1", "Player 2"])
 
@@ -55,4 +62,4 @@ with open("databases/dice.csv", "r") as file:
     # print each row (correct neat format)
     for row in content:
         if len(row) >= 2:
-            print(f"{row[0]:<20} {row[1]:<20}")
+            print(f"{row[0]:<20} {row[1]:<20}")"""
