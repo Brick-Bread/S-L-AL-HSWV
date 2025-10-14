@@ -1,6 +1,13 @@
 # S-L-AL-HSWV
-GANG GANG WHY YOU ON MY GITHUB
 
-The database code is practically done for now
+Welcome to the Sixth Form S&L project!
 
-The database code has opened up the csv files but requires to be in a callable sub routine + the actual game values realtime addition
+## Database Code Status
+
+- The database code is mostly complete.
+- It can open CSV files.
+- Next steps:
+    - Refactor into a callable subroutine.
+    - Implement real-time addition of game values.
+
+Feel free to contribute or explore the repository!
