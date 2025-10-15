@@ -4,7 +4,7 @@ import time
 import csv
 import Databasetest as dbt
 import displayingsubroutine as display
-import MAINGAMELOOP as mgl
+import snakesandladders as mgl
 
 
 salboard=[[43, 44, 45, 46, 47, 48, 49],
