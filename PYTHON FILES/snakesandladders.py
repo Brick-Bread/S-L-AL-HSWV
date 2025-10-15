@@ -61,7 +61,7 @@ def s_lad():
     if player_1total > 49: # checks if player position is above 49
       player_1total = 49  # sets player position to 49 if above 49 as the board ends at 49 (again i encountered an error where when i had this a player would roll above 49 and it would break the game not display the win message and just end)
     print(f"player 1 is moving {roll1 + roll2} spaces") # informs player how many spaces they are moving
-    ds.disp(salboard, player_1total, player_2total)
+    player_1total+=roll1+roll2
     if player_1total == 3: # checks if player landed on a ladder
       player_1total = 22 # moves player to the top of the ladder
       print("Player 1 climbed a ladder to ",ladder1)
@@ -114,6 +114,7 @@ def s_lad():
     roll2 = random.randint(1,6) # rolls dice 2
     print(f"Player 2 rolled a {roll1} and a {roll2}")
     player_2total += roll1 + roll2
+    ds.disp(salboard, player_1total, player_2total)
     if roll1 == roll2:
       print(f"Double was rolled, you go back {roll1 + roll2} spaces")
       player_2total -= roll1 + roll2
