@@ -35,9 +35,11 @@ with open("databases/winners.csv", "r") as file: # This reads the csv file to pr
     header = next(content)"""
 
 def create_database():
-    with open("databases/winner.csv", "w") as file:
+    with open("databases/winner.csv", "w", newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(["Winner:  "], ["Counter:   "])
+        writer.writerow(["Winner:  ", "Counter:   "])
+
+create_database()
 
 """with open("databases/dice.csv", "w") as file: # This creates a new database file for the winners of the game if you are a retard and can't read simple code
     writer = csv.writer(file)
