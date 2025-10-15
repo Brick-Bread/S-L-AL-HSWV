@@ -7,6 +7,7 @@ salboard=[["43", "44", "45", "46", "47", "48", "49"],
       ["1", "2", "3", "4", "5", "6", "7"]]
 
 import random
+import displayingsubroutine as ds
 def s_lad():
   player_1total = 0 # equivilent to position
   player_2total = 0 # equivilent to position
@@ -53,7 +54,7 @@ def s_lad():
       player_1total -= roll1 + roll2 # moves player back the amount rolled (look at the task we were given and it says we need to do this)
     print(f"Player 1 rolled a {roll1} and a {roll2}") # informs player of what they rolled
     player_1total += roll1 + roll2 # moves player forward the amount rolled
-
+    ds.disp(salboard, player_1total, player_2total)
     if player_1total < 1: # checks if player position is below 1 (a failsafe from an error i encountered while testing)
       player_1total = 1 # sets player position to 1 if below 1 cah board starts from 1 to 49
 
@@ -157,6 +158,6 @@ def s_lad():
   return(player_1total, player_2total) # for the writing and whatever we need the results for idk , just returns the final positions of both players
 
 
-game = s_lad() #yk what this does
-print(game) 
+#game = s_lad() #yk what this does
+#print(game) 
 

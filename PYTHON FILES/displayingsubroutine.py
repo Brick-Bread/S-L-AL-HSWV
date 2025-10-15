@@ -7,21 +7,25 @@ salboard=[["43", "44", "45", "46", "47", "48", "49"],
           ["1", "2", "3", "4", "5", "6", "7"]]
 import snakesandladders as sl
 
-def disp(salboard):
+def disp(salboard, player_1total, player_2total):
     counter=0
     for row in salboard:
+        display_row = []
         for item in row:
-            print(item, end=" ")
-            counter+=1
-            if counter % 7 == 0:
-                print("\n")
-    player1tile=1
-    player2tile=1
-    
-    print("Both players are on tile 1. \nplayer 1 moves first...")
-    sl.s_lad()
+            item_num = int(item)
+            if item_num == player_1total and item_num == player_2total:
+                display_row.append("Both")
+            elif item_num == player_1total:
+                display_row.append("P1")
+            elif item_num == player_2total:
+                display_row.append("P2")
+            else:
+                display_row.append(item)
+        print(" | ".join(display_row))
+    print("\n")
 
 
+#player_1total, player_2total=sl.s_lad()
 
+#disp(salboard, player_1total, player_2total)
 
-disp(salboard)
