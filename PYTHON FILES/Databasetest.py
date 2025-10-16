@@ -34,12 +34,24 @@ with open("databases/winners.csv", "r") as file: # This reads the csv file to pr
     content = csv.reader(open("winners.csv"))
     header = next(content)"""
 
-def create_database():
+def create_database(): # This subroutine will just create the file and make the two new headers. Once file is created, this subroutine will not need to be called again
     with open("databases/winner.csv", "w", newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Winner:  ", "Counter:   "])
 
 create_database()
+
+def write_to_database():
+    with open("databases/winner.csv", "a", newline='') as file:
+        writer = csv.writer(file)
+        round = 1  # You can increment this variable as needed
+        writer.writerow([winner_P, round])
+
+        print(f"{'Winner':<20} {'Counter':<20}")
+        print("-" * 40)
+        print(f"{winner_P:<20} {round:<20}")
+    
+
 
 """with open("databases/dice.csv", "w") as file: # This creates a new database file for the winners of the game if you are a retard and can't read simple code
     writer = csv.writer(file)
