@@ -50,6 +50,8 @@ def write_to_database():
         print(f"{'Winner':<20} {'Counter':<20}")
         print("-" * 40)
         print(f"{winner_P:<20} {round:<20}")
+
+write_to_database()
     
 
 
