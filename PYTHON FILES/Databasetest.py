@@ -17,6 +17,8 @@ salboard = [
 
 table = salboard
 
+# liam is fat
+
 winner_P = input("Who was the winner?: ")
 
 winner = []
