@@ -13,7 +13,7 @@ def disp(salboard, player_1total, player_2total):
         for item in row:
             item_num = int(item)
             if item_num == player_1total and item_num == player_2total:
-                display_row.append("Both")
+                display_row.append("♞ + ♔")
             elif item_num == player_1total:
                 display_row.append("♔")
             elif item_num == player_2total:
