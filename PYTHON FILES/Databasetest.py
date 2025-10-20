@@ -15,15 +15,6 @@ salboard = [
     ["1", "2", "3", "4"]
     ]
 
-table = salboard
-
-# liam is fat
-
-winner_P = input("Who was the winner?: ")
-
-winner = []
-winner.append(winner_P)
-
 """with open("databases/winners.csv", "w", newline = "") as file:
     writer = csv.writer(file)
     writer.writerow([winner_P])
@@ -41,19 +32,16 @@ def create_database(): # This subroutine will just create the file and make the 
         writer = csv.writer(file)
         writer.writerow(["Winner:  ", "Counter:   "])
 
-create_database()
 
-def write_to_database():
+
+def write_to_database(round, winner):
     with open("databases/winner.csv", "a", newline='') as file:
         writer = csv.writer(file)
-        round = 1  # You can increment this variable as needed
-        writer.writerow([winner_P, round])
+        writer.writerow([winner, round])
 
         print(f"{'Winner':<20} {'Counter':<20}")
         print("-" * 40)
-        print(f"{winner_P:<20} {round:<20}")
-
-write_to_database()
+        print(f"{winner:<20} {round:<20}")
 
 
 
@@ -77,3 +65,4 @@ with open("databases/dice.csv", "r") as file:
     for row in content:
         if len(row) >= 2:
             print(f"{row[0]:<20} {row[1]:<20}")"""
+

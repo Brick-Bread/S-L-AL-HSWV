@@ -6,6 +6,10 @@ salboard=[["43", "44", "45", "46", "47", "48", "49"],
       ["14", "13", "12", "11", "10", "9", "8"],
       ["1", "2", "3", "4", "5", "6", "7"]]
 
+winner  = ""
+
+import Databasetest as ballz
+import csv
 import random
 import displayingsubroutine as ds
 def s_lad():
@@ -107,6 +111,7 @@ def s_lad():
 
     if player_1total == 49: # checks if player 1 has won
       print("Player 1 wins!") # informs players that player 1 has won
+      winner = "Player 1"
       print(f"player 2 was on {player_2total}") # informs players of player 2 position
       print("Game Over") # informs players that the game is over
       break # breaks the loop to end the game (defo didnt have to revise where to put breaks ......)
@@ -174,11 +179,16 @@ def s_lad():
 
     if player_2total == 49: # checks if player 2 has won
       print("Player 2 wins!")  # informs players that player 2 has won
+      winner = "Player 2"
       print(f"player 1 was on {player_1total}") # informs players of player 1 position, if ur thinky why i dont show both player 2 and 1 position for this to run one player is at position 49 and the other player could be anywhere from 1 to 48 so i just show the other players position
       print("Game Over") # informs players that the game is over
       break 
+
     
-  return(player_1total, player_2total) # for the writing and whatever we need the results for idk , just returns the final positions of both players
+  return(player_1total, player_2total, winner) # for the writing and whatever we need the results for idk , just returns the final positions of both players
+
+ballz.create_database()
+ballz.write_to_database(round, winner)
 
 
 game = s_lad() #yk what this does
