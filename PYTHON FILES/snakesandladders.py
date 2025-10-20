@@ -6,18 +6,24 @@ salboard=[["43", "44", "45", "46", "47", "48", "49"],
       ["14", "13", "12", "11", "10", "9", "8"],
       ["1", "2", "3", "4", "5", "6", "7"]]
 
-winner  = ""
-
+# DISPLAY ISSUE
 import Databasetest as ballz
 import csv
 import random
 import displayingsubroutine as ds
 def s_lad():
+  player_1total = 0
+  player_2total = 0
+  round_num = 0
+  winner = ""
+
+
+
   player_1total = 0 # equivilent to position
   player_2total = 0 # equivilent to position
   prompt1 = 0 # used to prompt user to roll dice
   prompt2 = 0 # used to prompt user to roll dice
-  round = 0 # used to count rounds
+  round_num = 0 # used to count rounds
   # intro to game and rules
   print("Welcome to Snakes and Ladders")
   print("===================================")
@@ -46,8 +52,8 @@ def s_lad():
   snake4=random.randint(1,35)
 
   while player_1total < 49 and player_2total < 49:
-    round += 1 # counts rounds
-    print(f"Round {round}") # shows round number
+    round_num += 1 # counts rounds
+    print(f"Round {round_num}") # shows round number
     
     prompt1 = input("Player 1, press enter to roll the dice") # prompts player 1 to  iniciate the rolling of both dices
     roll1 = random.randint(1,6) # rolls dice 1
@@ -185,11 +191,15 @@ def s_lad():
       break 
 
     
-  return(player_1total, player_2total, winner) # for the writing and whatever we need the results for idk , just returns the final positions of both players
-
-ballz.create_database()
-ballz.write_to_database(round, winner)
+  return(player_1total, player_2total, winner, round_num) # for the writing and whatever we need the results for idk , just returns the final positions of both players
 
 
 game = s_lad() #yk what this does
 print(game) 
+
+
+player_1total, player_2total, winner, round_num = game
+
+ballz.create_database() # only ever needed once
+ballz.write_to_database(winner, round_num)
+

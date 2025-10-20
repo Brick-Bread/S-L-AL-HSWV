@@ -27,21 +27,21 @@ with open("databases/winners.csv", "r") as file: # This reads the csv file to pr
     content = csv.reader(open("winners.csv"))
     header = next(content)"""
 
-def create_database(): # This subroutine will just create the file and make the two new headers. Once file is created, this subroutine will not need to be called again
+def create_database():
+    """Creates a new CSV file with headers (only needs to run once)."""
     with open("databases/winner.csv", "w", newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(["Winner:  ", "Counter:   "])
+        writer.writerow(["Winner", "Counter"])  # cleaner header names
 
 
-
-def write_to_database(round, winner):
+def write_to_database(winner, round_num):
     with open("databases/winner.csv", "a", newline='') as file:
         writer = csv.writer(file)
-        writer.writerow([winner, round])
+        writer.writerow([winner, round_num])
 
-        print(f"{'Winner':<20} {'Counter':<20}")
-        print("-" * 40)
-        print(f"{winner:<20} {round:<20}")
+    print(f"{'Winner':<20} {'Counter':<20}")
+    print("-" * 40)
+    print(f"{winner:<20} {round_num:<20}")
 
 
 
