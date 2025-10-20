@@ -54,7 +54,7 @@ def write_to_database():
         print(f"{winner_P:<20} {round:<20}")
 
 write_to_database()
-    
+
 
 
 """with open("databases/dice.csv", "w") as file: # This creates a new database file for the winners of the game if you are a retard and can't read simple code
