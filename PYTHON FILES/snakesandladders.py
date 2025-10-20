@@ -69,6 +69,8 @@ def s_lad():
     if player_1total < 1: # checks if player position is below 1 (a failsafe from an error i encountered while testing)
       player_1total = 1 # sets player position to 1 if below 1 cah board starts from 1 to 49
 
+
+
     if player_1total > 49: # checks if player position is above 49
       player_1total = 49  # sets player position to 49 if above 49 as the board ends at 49 (again i encountered an error where when i had this a player would roll above 49 and it would break the game not display the win message and just end)
       ds.disp(salboard, player_1total, player_2total)

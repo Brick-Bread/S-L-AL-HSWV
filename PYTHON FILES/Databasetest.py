@@ -1,5 +1,5 @@
 
-import csv
+import csv, os
 
 # THIS MOTHERFUCKING CODE DOESN'T WORK, IMA JUMP
 
@@ -28,10 +28,10 @@ with open("databases/winners.csv", "r") as file: # This reads the csv file to pr
     header = next(content)"""
 
 def create_database():
-    """Creates a new CSV file with headers (only needs to run once)."""
-    with open("databases/winner.csv", "w", newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(["Winner", "Counter"])  # cleaner header names
+    if not os.path.exists("databases/winner.csv"):
+        with open("databases/winner.csv", "w", newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Winner", "Counter"])  # cleaner header names
 
 
 def write_to_database(winner, round_num):
