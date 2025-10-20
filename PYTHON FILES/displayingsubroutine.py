@@ -5,7 +5,6 @@ salboard=[["43", "44", "45", "46", "47", "48", "49"],
           ["15", "16", "17", "18", "19", "20", "21"],
           ["14", "13", "12", "11", "10", "9", "8"],
           ["1", "2", "3", "4", "5", "6", "7"]]
-import snakesandladders as sl
 
 def disp(salboard, player_1total, player_2total):
     counter=0

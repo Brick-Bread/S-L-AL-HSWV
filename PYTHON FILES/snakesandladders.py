@@ -66,34 +66,43 @@ def s_lad():
 
     if player_1total == 3: # checks if player landed on a ladder
       player_1total = 22 # moves player to the top of the ladder
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 1 climbed a ladder to ",ladder1)
 
     elif player_1total == 5:
       player_1total = 8
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 1 climbed a ladder to ",ladder2)
 
     elif player_1total == 11:
       player_1total = 26
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 1 climbed a ladder to ",ladder3)
 
     elif player_1total == 20:
       player_1total = 29
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 1 climbed a ladder to ",ladder4)
 
     elif player_1total == 17:  
       player_1total = 4
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 1 got bitten by a snake to ",snake1)
 
     elif player_1total == 19:
       player_1total = 7
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 1 got bitten by a snake to ",snake2)
       
     elif player_1total == 27:
       player_1total = 1
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 1 got bitten by a snake to ",snake3)
 
     elif player_1total == 39:
+      
       player_1total = 3
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 1 got bitten by a snake to ",snake4) 
 
     if player_1total == 49: # checks if player 1 has won
@@ -109,46 +118,58 @@ def s_lad():
     roll2 = random.randint(1,6) # rolls dice 2
     print(f"Player 2 rolled a {roll1} and a {roll2}")
     player_2total += roll1 + roll2
+    ds.disp(salboard, player_1total, player_2total)
     if roll1 == roll2:
       print(f"Double was rolled, you go back {roll1 + roll2} spaces")
       player_2total -= roll1 + roll2
+      ds.disp(salboard, player_1total, player_2total)
 
     if player_2total < 0:
       player_2total = 0
+      ds.disp(salboard, player_1total, player_2total)
 
     if player_2total > 49:
       player_2total = 49
+      ds.disp(salboard, player_1total, player_2total)
 
     if player_2total == 3:
       player_2total = ladder1
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 2 climbed a ladder to ",ladder1)
 
     elif player_2total == 5:
       player_2total = ladder2
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 2 climbed a ladder to ",ladder2)
 
     elif player_2total == 11:
       player_2total = ladder3
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 2 climbed a ladder to ",ladder3)
 
     elif player_2total == 20:
       player_2total = ladder4
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 2 climbed a ladder to ",ladder4)
 
     elif player_2total == 17:
       player_2total = snake1
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 2 got bitten by a snake to ",snake1)
 
     elif player_2total == 19:
       player_2total = snake2
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 2 got bitten by a snake to ",snake2)
 
     elif player_2total == 27:
       player_2total = snake3
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 2 got bitten by a snake to ",snake3)
 
     elif player_2total == 39:
       player_2total = snake4
+      ds.disp(salboard, player_1total, player_2total)
       print("Player 2 got bitten by a snake to ",snake4)
 
     if player_2total == 49: # checks if player 2 has won
